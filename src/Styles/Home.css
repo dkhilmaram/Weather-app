@@ -1,0 +1,25 @@
+.home {
+  text-align: center;
+  padding: 3rem;
+  background: linear-gradient(to bottom right, var(--light-blue), var(--white));
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  max-width: 700px;
+}
+
+.home h1 {
+  color: var(--blue);
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.home h2 {
+  color: var(--dark);
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.home p {
+  color: var(--gray);
+  font-size: 1.2rem;
+}

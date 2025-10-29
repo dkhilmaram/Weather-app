@@ -1,0 +1,26 @@
+.search {
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.search .input {
+  flex: 1;
+  padding: 0.5rem 1rem;
+  border-radius: 5px 0 0 5px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+.search .btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  background-color: var(--btn-bg, #007bff);
+  color: var(--btn-color, #fff);
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.search .btn:hover {
+  opacity: 0.9;
+}
