@@ -1,35 +1,27 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
-
 :root {
-  --blue: #3b82f6;
-  --light-blue: #e0ecff;
-  --white: #ffffff;
-  --dark: #1e293b;
-  --gray: #64748b;
+  /* Shared design language */
+  --font: 'Poppins', sans-serif;
+  --accent: #00d4ff;
+
+  /* Light mode defaults */
+  --bg-main: #f5f7fa;
+  --bg-card: rgba(255, 255, 255, 0.7);
+  --text-main: #1a1a1a;
+  --border: rgba(0, 0, 0, 0.1);
+  --shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+[data-theme='dark'] {
+  --bg-main: #0e1117;
+  --bg-card: rgba(255, 255, 255, 0.05);
+  --text-main: #e0e0e0;
+  --border: rgba(255, 255, 255, 0.1);
+  --shadow: 0 0 15px rgba(0, 212, 255, 0.25);
 }
 
 body {
-  background-color: var(--white);
-  color: var(--dark);
-}
-
-.app {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-main {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 2rem;
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  font-family: var(--font);
+  transition: background 0.4s, color 0.4s;
 }

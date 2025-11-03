@@ -1,24 +1,44 @@
 .navbar {
-  background-color: var(--white);
+  background: var(--bg-card);
+  backdrop-filter: blur(12px);
+  box-shadow: var(--shadow-glow);
+  padding: 1rem 2rem;
+  border-radius: 20px;
   display: flex;
   justify-content: center;
-  padding: 1rem 0;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  margin: 20px auto;
+  width: 80%;
 }
 
 .nav-links {
-  list-style: none;
   display: flex;
+  list-style: none;
   gap: 2rem;
 }
 
 .nav-links a {
+  color: var(--text-light);
   text-decoration: none;
-  color: var(--dark);
   font-weight: 600;
+  position: relative;
   transition: color 0.3s;
 }
 
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: var(--accent);
+  bottom: -4px;
+  left: 0;
+  transition: width 0.3s;
+}
+
 .nav-links a:hover {
-  color: var(--blue);
+  color: var(--accent);
+}
+
+.nav-links a:hover::after {
+  width: 100%;
 }

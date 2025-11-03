@@ -1,90 +1,77 @@
-/* Background layout */
 .auth-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  background: linear-gradient(135deg, #5b247a, #1bcedf);
-  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+  background: linear-gradient(
+    135deg,
+    var(--bg-main) 0%,
+    color-mix(in srgb, var(--accent) 20%, var(--bg-main)) 100%
+  );
+  transition: background 0.4s ease;
 }
 
-/* Form styling */
 .auth-form {
-  background: #ffffffdd;
-  padding: 40px 60px;
-  border-radius: 20px;
-  box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.3);
-  width: 400px;
+  background: var(--bg-card);
+  backdrop-filter: blur(20px);
+  padding: 3rem 4rem;
+  border-radius: 25px;
+  box-shadow: 0 0 25px rgba(0, 212, 255, 0.2);
   text-align: center;
+  width: 380px;
 }
 
-/* Titles and labels */
 .auth-title {
-  color: #5b247a;
-  font-size: 2.5em;
-  margin-bottom: 10px;
+  color: var(--accent);
+  font-size: 2.4rem;
   font-weight: 700;
+  text-shadow: 0 0 10px var(--accent-glow);
 }
 
 .auth-subtitle {
-  color: #1bcedf;
-  margin-bottom: 30px;
-  font-size: 1.1em;
+  color: var(--text-light);
+  opacity: 0.7;
+  margin-bottom: 2rem;
 }
 
 label {
   display: block;
-  color: #5b247a;
-  font-weight: 600;
   text-align: left;
-  margin-top: 10px;
+  color: var(--text-light);
+  margin-top: 1rem;
 }
 
-/* Inputs */
 input {
   width: 100%;
   padding: 12px;
-  margin-top: 5px;
-  margin-bottom: 20px;
-  border: 2px solid #5b247a;
+  background: var(--bg-dark);
+  border: 1px solid var(--border-light);
+  color: var(--text-light);
   border-radius: 10px;
-  outline: none;
-  font-size: 1em;
-  color: #333;
+  margin-top: 5px;
   transition: 0.3s;
 }
 
 input:focus {
-  border-color: #1bcedf;
-  box-shadow: 0 0 10px #1bcedf66;
+  border-color: var(--accent);
+  box-shadow: 0 0 10px var(--accent-glow);
 }
 
-/* Button */
 .auth-btn {
-  background: linear-gradient(90deg, #5b247a, #1bcedf);
-  color: white;
+  margin-top: 20px;
+  width: 100%;
+  background: var(--accent);
+  color: var(--bg-dark);
   border: none;
-  padding: 12px 25px;
   border-radius: 25px;
+  padding: 0.9rem;
+  font-size: 1.1rem;
+  font-weight: bold;
   cursor: pointer;
-  font-size: 1.1em;
-  font-weight: 600;
-  transition: 0.3s;
+  transition: all 0.3s;
 }
 
 .auth-btn:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 10px #1bcedf88;
-}
-
-/* Responsive */
-@media (max-width: 480px) {
-  .auth-form {
-    width: 90%;
-    padding: 25px;
-  }
-
-  .auth-title {
-    font-size: 2em;
-  }
+  box-shadow: 0 0 15px var(--accent-glow);
 }

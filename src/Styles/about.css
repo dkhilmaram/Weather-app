@@ -1,20 +1,57 @@
+/* Ensure body and html fill the viewport */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Container for the About page */
 .about {
+  display: flex;
+  justify-content: center;  /* horizontal centering */
+  align-items: center;      /* vertical centering */
+  height: 100vh;            /* full viewport height */
+  width: 100%;
+  background: var(--bg-main);
+  color: var(--text-main);
   text-align: center;
-  padding: 3rem;
-  background: var(--light-blue);
-  border-radius: 15px;
+  padding: 2rem;
+  box-sizing: border-box;
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+/* The card holding the content */
+.about-card {
+  background: var(--bg-card);
+  backdrop-filter: blur(15px);
+  box-shadow: var(--shadow);
+  border-radius: 25px;
+  padding: 3rem 3.5rem;
   max-width: 700px;
-  box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+  width: 90%;               /* responsive width */
+  border: 1px solid var(--border);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.about-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 25px rgba(0, 212, 255, 0.25);
+}
+
+/* Heading */
 .about h1 {
-  color: var(--blue);
-  font-size: 2rem;
-  margin-bottom: 1rem;
+  color: var(--accent);
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+  text-shadow: 0 0 10px rgba(0, 212, 255, 0.4);
 }
 
+/* Paragraph */
 .about p {
-  color: var(--dark);
-  font-size: 1.1rem;
-  line-height: 1.6;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  opacity: 0.9;
+  margin: 0 auto;
+  max-width: 600px;
 }

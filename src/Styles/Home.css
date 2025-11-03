@@ -1,25 +1,18 @@
-.home {
+.home-container {
   text-align: center;
-  padding: 3rem;
-  background: linear-gradient(to bottom right, var(--light-blue), var(--white));
-  border-radius: 20px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  max-width: 700px;
+  padding: 4rem 2rem;
 }
 
-.home h1 {
-  color: var(--blue);
-  font-size: 2.5rem;
+.home-title {
+  font-size: 2.8rem;
+  color: var(--accent);
   margin-bottom: 1rem;
+  text-shadow: 0 0 10px var(--accent-glow);
 }
 
-.home h2 {
-  color: var(--dark);
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-}
-
-.home p {
-  color: var(--gray);
-  font-size: 1.2rem;
+.home-text {
+  font-size: 1.3rem;
+  color: var(--text-light);
+  opacity: 0.8;
+  line-height: 1.8;
 }
